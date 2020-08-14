@@ -79,36 +79,60 @@
 						</md-menu-content>
 					</md-menu>
 
-
 					<md-menu>
 						<md-button aria-label="Service Orchestration" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)" style="margin-left: 5px;margin-right: 5px;width: auto;">
 							<i class="fa fa-link ng-scope" aria-hidden="true"></i>
 							Service Orchestration</md-button>
 						<md-menu-content width="5">
 							<md-menu-item>
-								<md-button ng-click="openPanel('path-setup')" ng-class="{'selected-item': shared.sidePanelName === 'path-setup'}">
+								<md-button onclick="window.open('http://google.com', '_self');"/>
 									<i class="fa fa-wrench" aria-hidden="true"></i>
 									ABF
 								</md-button>
 							</md-menu-item>
 							<md-menu-item>
-								<md-button ng-click="openPanel('path-list')" ng-class="{'selected-item': shared.sidePanelName === 'path-list' || shared.sidePanelName === 'path-details'}">
+								<md-button onclick="window.open('http://google.com', '_self');"/>
 									<i class="fa fa-exchange" aria-hidden="true"></i>
 									ODN
 								</md-button>
 							</md-menu-item>
 						</md-menu-content>
 					</md-menu>
-					
+
+					<md-menu>
+						<md-button aria-label="Telemetry" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)" style="margin-left: 5px;margin-right: 5px;width: auto;">
+							<i class="fa fa-link ng-scope" aria-hidden="true"></i>
+							Telemetry</md-button>
+						<md-menu-content width="5">
+							<md-menu-item>
+								<md-button onclick="window.open('http://10.74.84.30:3000/dashboard/db/r11-statistics?refresh=5s&orgId=1', '_self');"/>
+								<i class="fa fa-wrench" aria-hidden="true"></i>
+								R11 Status
+								</md-button>
+							</md-menu-item>
+							<md-menu-item>
+								<md-button onclick="window.open('http://10.74.84.30:3000/dashboard/db/r12-statistics?refresh=5s&orgId=1', '_self');"/>
+								<i class="fa fa-exchange" aria-hidden="true"></i>
+								R12 Status
+								</md-button>
+							</md-menu-item>
+							<md-menu-item>
+								<md-button onclick="window.open('http://10.74.84.30:3000/dashboard/db/chu-kou-lian-lu-qing-kuang?refresh=5s&orgId=1', '_self');"/>
+								<i class="fa fa-exchange" aria-hidden="true"></i>
+								Exit Link Status
+								</md-button>
+							</md-menu-item>
+						</md-menu-content>
+					</md-menu>
+
 					<md-button ng-click="openPanel('telemetry')" ng-class="{'selected-item': shared.sidePanelName === 'Telemetry' || shared.sidePanelName === 'Telemetry'}">
 						<i class="fa fa-link" aria-hidden="true"></i>
-						Telemetry
+						System
 					</md-button>
+
 
 				</div>
 			</md-toolbar>
-
-
 
 			<div class="content-wrapper">
 				<md-progress-linear ng-if="!shared.topologyInitd" md-mode="indeterminate"></md-progress-linear>
