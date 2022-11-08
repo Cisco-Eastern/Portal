@@ -6,7 +6,7 @@
   "dependencies": {
     "glob": "^7.0.3",
     "graceful-fs": "^4.1.4",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "run-sequence": "^2.2.1"
   },
   "devDependencies": {
